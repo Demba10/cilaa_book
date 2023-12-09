@@ -1,0 +1,206 @@
+.general {
+    background-color: var(--blue-base);
+    width: 100%;
+    padding: 0 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content {
+    position: relative;
+    top: -8%;
+}
+.typo h2 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.typo .desc {
+    font-size: 1.4em;
+    color: white;
+}
+.btn-items {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 50px;
+}
+.btn-item {
+    background-color: var(--blue-second);
+    width: 220px;
+    border: 2px solid var(--blue-second);
+    border-radius: 40px;
+    padding: 20px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+
+/* Porteur de projet */
+
+.login {
+    width: 100%;
+    padding: 0;
+}
+
+.image-background {}
+
+.image-background img {
+    height: 100vh;
+    width: 100%;
+}
+
+.login-box {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--blue-base);
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-item {
+    position: relative;
+    background-color: white;
+    z-index: 20;
+    opacity: 1;
+    width: 30%;
+}
+
+
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    position: absolute;
+    top: 0;
+    z-index: 12;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-signin {
+    width: 32%;
+    padding: 15px 35px 45px;
+    border-radius: 8px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    .form-signin-heading,
+    .checkbox {
+        margin-bottom: 30px;
+    }
+    .form-signin-heading {
+        color: var(--blue-base);
+        font-weight: 800;
+    }
+    .checkbox {
+        font-weight: normal;
+    }
+
+    .form-control {
+        position: relative;
+        font-size: 16px;
+        height: auto;
+        padding: 10px;
+        @include box-sizing(border-box);
+
+        &:focus {
+            z-index: 2;
+        }
+    }
+
+    input[type="text"] {
+        margin-bottom: -1px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    input[type="password"] {
+        margin-bottom: 20px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+.input-group-text {
+    margin-top: 20px;
+}
+
+.btn-login {
+    background-color: var(--blue-base);
+    color: #fff;
+    border: 0 solid;
+    margin-bottom: 6px;
+}
+
+.form-signin input {
+    margin: 10px 0;
+}
+
+.no-account {
+    color: var(--Orange-first);
+}
+
+.btn-back {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    z-index: 30;
+    /* background-color: white; */
+    color: var(--blue-second);
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+.btn-back i {
+    margin-top: -6px;
+    margin-right: 10px;
+}
+.typo-desc {
+    width: 50%;
+    padding: 0 10%;
+    height: 100%;
+    background-color: var(--blue-base);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+}
+
+.desc-b-p {
+    display: flex;
+    gap: 30px;
+}
+h5.desc-b-p {
+    color: var(--blue-second);
+}
+.style-b-p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.left-style, .right-style {
+    height: 160px;
+    width: 6px;
+    background-color: var(--Orange-first);
+}
+.left-style {
+    background-color: var(--blue-second);
+}
+.right-style {
+    position: relative;
+    top: -20px;
+}

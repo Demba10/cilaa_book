@@ -1,0 +1,160 @@
+<section id="projet" style="margin: 30px auto; width: 70%;" class="">
+    <div class="container-fluid">
+        <div class="projet-head row">
+            <div class="col-6 d-flex">
+                <div class="p-h p-h-left" (click)="swichter1()">
+                    <h5 class="blue-color">Mes projets</h5>
+                    <div class="souligne" *ngIf="switch == 1">
+                        <span class="s-1"></span>
+                    </div>
+                </div>
+                <div class="p-h p-h-left" (click)="swichter2()">
+                    <h5 class="blue-color">Ajouter un projet</h5>
+                    <div class="souligne" *ngIf="switch == 2">
+                        <span class="s-1"></span>
+                    </div>
+                </div>
+            </div>
+                <div class="col-6">
+                    <div class="p-h p-h-right">
+                        <input type="text" placeholder="Rechercher" class="search-projet">
+                    </div>
+                
+                </div>
+        </div>
+    </div>
+</section>
+<section class="container" style="width: 70%; margin-top: 40px; margin-bottom: 40px;"  *ngIf="switch === 1">
+    <div class="contenu-page">
+        <div class="projet-list row">
+            <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
+                <div class="icon-image">
+    
+                </div>
+            </div>
+            <div class="middle-projet col-12 col-md-6 col-lg-6">
+                <div class="titre-projet">
+                    <h4>Cilla Book </h4>
+                </div>
+                <div class="desc-projet my-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
+                    fuga sunt minus autem asperiores aut eos similique.
+                </div>
+                <div class="another-infos d-flex gap-4">
+                    <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
+                    <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
+                </div>
+            </div>
+            <div class="content-btn col-12 col-md-12 col-lg-3">
+                <div class="row">
+                    <div class="cta-porteur col"><button>supprimer</button></div>
+                    <div class="cta-porteur col"><button>modifier</button></div>
+                    <div class="cta-porteur col"><button>détails</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="projet-list row">
+            <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
+                <div class="icon-image">
+    
+                </div>
+            </div>
+            <div class="middle-projet col-12 col-md-6 col-lg-6">
+                <div class="titre-projet">
+                    <h4>Cilla Book </h4>
+                </div>
+                <div class="desc-projet my-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
+                    fuga sunt minus autem asperiores aut eos similique.
+                </div>
+                <div class="another-infos d-flex gap-4">
+                    <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
+                    <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
+                </div>
+            </div>
+            <div class="content-btn col-12 col-md-12 col-lg-3">
+                <div class="row">
+                    <div class="cta-porteur col"><button>supprimer</button></div>
+                    <div class="cta-porteur col"><button>modifier</button></div>
+                    <div class="cta-porteur col"><button>détails</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="projet-list row">
+            <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
+                <div class="icon-image">
+    
+                </div>
+            </div>
+            <div class="middle-projet col-12 col-md-6 col-lg-6">
+                <div class="titre-projet">
+                    <h4>Cilla Book </h4>
+                </div>
+                <div class="desc-projet my-1">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
+                    fuga sunt minus autem asperiores aut eos similique.
+                </div>
+                <div class="another-infos d-flex gap-4">
+                    <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
+                    <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
+                </div>
+            </div>
+            <div class="content-btn col-12 col-md-12 col-lg-3">
+                <div class="row">
+                    <div class="cta-porteur col"><button>supprimer</button></div>
+                    <div class="cta-porteur col"><button>modifier</button></div>
+                    <div class="cta-porteur col"><button>détails</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagination row">
+        <div class="pagination-box d-flex">
+            <div class="col"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+            <div class="col"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+    </div>
+</section>
+<section class="add-projet" *ngIf="switch === 2">
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+        <div class="container">
+            <div class="card login-card">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <img src="assets/images/welcome-2.png" alt="login" class="login-card-img">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <div class="brand-wrapper">
+                                <img src="assets/login/images/logo.svg" alt="logo" class="logo">
+                            </div>
+                            <p class="login-card-description">Quel est le nom du projet ?</p>
+                            <form action="#!">
+                                <div class="form-group">
+                                    <label for="email" class="sr-only">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control"
+                                        placeholder="Email address">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="password" class="sr-only w-100">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control"
+                                        placeholder="***********">
+                                </div>
+                                <div class="next-step d-flex">
+                                    <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button"
+                                        value="Login">
+                                    <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button"
+                                        value="Login">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</section>

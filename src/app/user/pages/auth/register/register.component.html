@@ -1,0 +1,99 @@
+<div class="general" *ngIf="passe == 0">
+    <div class="content">
+        <div class="typo">
+            <h2>Bienvenue dans la plateforme <br> d’inscription</h2>
+            <p class="desc">Qu souhaitez-vous devenir ?</p>
+        </div>
+    
+    
+        <div class="btn-items">
+            <button class="btn-item" (click)="switchPorteur()">Porteur de projet</button>
+            <button class="btn-item" (click)="switchBailleur()">Bailleur</button>
+        </div>
+    </div>
+</div>
+
+<!-- Pour le porteur de projet -->
+
+<div class="login container-fluid" *ngIf="passe == 1">
+    <div class="image-background">
+        <img src="assets/images/login-1.jpg" alt="">
+    </div>
+    <div class="btn-back" (click)="swichDefault()">
+        <i class="fa-solid fa-arrow-left"></i><h6>Retour</h6>
+    </div>
+    <div class="login-box">
+    </div>
+    <div class="wrapper">
+        <div class="typo-desc">
+            <h3>Inscription porteur de projet</h3>
+            <div class="desc-b-p">
+                <div class="style-b-p">
+                    <div class="left-style"></div>
+                    <div class="right-style"></div>
+                </div>
+                <h5 class="desc-b-p">Proposer des financements à vos au jeunes porteurs de projet et devenez tous gagnants</h5>
+            </div>
+        </div>
+        <form class="form-signin">
+            <h2 class="form-signin-heading text-center">Inscription</h2>
+            <input type="text" class="form-control" name="username" placeholder="Nom complet" required=""
+                autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Adresse" required="" />
+            <input type="text" class="form-control" name="username" placeholder="Adresse Email" required=""
+                autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Téléphone" required="" />
+            <input type="text" class="form-control" name="username" placeholder="Email" required=""
+                autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Mot de passe" required="" />
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> J'accepte les termes et conditions
+            </label>
+            <button class="btn-login btn btn-lg btn-primary btn-block w-100" type="submit">S'incrire</button>
+            <p>Vous avez pdéjà un compte ? <span class="no-account">Se connecter</span></p>
+        </form>
+    </div>
+</div>
+<!-- Pour le Bailleur de projet -->
+
+<div class="login container-fluid" *ngIf="passe == 2">
+    <div class="image-background">  
+        <img src="assets/images/login-1.jpg" alt="">
+    </div>
+    <div class="btn-back" (click)="swichDefault()">
+        <i class="fa-solid fa-arrow-left"></i><h6>Retour</h6>
+    </div>
+    <div class="login-box">
+    </div>
+    <div class="wrapper">
+        <div class="typo-desc">
+            <h3>Inscription bailleur</h3>
+            <div class="desc-b-p">
+                <div class="style-b-p">
+                    <div class="left-style"></div>
+                    <div class="right-style"></div>
+                </div>
+                <h5 class="desc-b-p">Proposer des financements à vos au jeunes porteurs de projet et devenez tous gagnants</h5>
+            </div>
+        </div>
+        <form class="form-signin">
+            <h2 class="form-signin-heading text-center">Inscription</h2>
+            <input type="text" class="form-control" name="username" placeholder="Nom complet" required=""
+                autofocus="" />
+            <input type="text" class="form-control" name="password" placeholder="Adresse" required="" />
+            <input type="text" class="form-control" name="username" placeholder="Adresse Email" required=""
+                autofocus="" />
+            <input type="text" class="form-control" name="password" placeholder="Téléphone" required="" />
+            <input type="text" class="form-control" name="username" placeholder="Email" required=""
+                autofocus="" />
+            <input type="text" class="form-control" name="username" placeholder="Statut" required=""
+                autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Mot de passe" required="" />
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> J'accepte les termes et conditions
+            </label>
+            <button class="btn-login btn btn-lg btn-primary btn-block w-100" type="submit">S'incrire</button>
+            <p>Vous avez pdéjà un compte ? <span class="no-account">Se connecter</span></p>
+        </form>
+    </div>
+</div>

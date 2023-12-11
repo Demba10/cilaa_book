@@ -7,6 +7,9 @@ import { FooterComponent } from './user/composants/footer/footer.component';
 import { HeaderComponent } from './user/composants/header/header.component';
 import { AccueilComponent } from './user/pages/accueil/accueil.component';
 import { BlogComponent } from './user/pages/blog/blog.component';
+import { AproposComponent } from './user/pages/apropos/apropos.component';
+import { FaqComponent } from './user/pages/faq/faq.component';
+import { ContactComponent } from './user/pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +19,10 @@ import { BlogComponent } from './user/pages/blog/blog.component';
     HeaderComponent,
     BlogComponent,
     AccueilComponent,
+    AproposComponent,
+    FaqComponent,
+    ContactComponent
+
 
   ],
   imports: [

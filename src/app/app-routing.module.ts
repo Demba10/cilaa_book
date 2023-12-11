@@ -11,10 +11,10 @@ const routes: Routes = [
     path: 'apropos' , component: AproposComponent
   },
   {
-    path: 'politiques', component: PolitiquesComponent
+    path: '', component: PolitiquesComponent
   },
   {
-    path: 'condition' , component: ConditionsComponent
+    path: 'conditions' , component: ConditionsComponent
   },
 ];
 

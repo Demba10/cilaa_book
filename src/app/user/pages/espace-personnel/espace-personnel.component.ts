@@ -10,6 +10,7 @@ export class EspacePersonnelComponent implements OnInit {
   // Les attributs
 
   switch: number = 2;
+  step: number = 11;
 
   ngOnInit(): void {
       
@@ -20,5 +21,20 @@ export class EspacePersonnelComponent implements OnInit {
   }
   swichter2() {
     this.switch = 2;
+  }
+  etape1() {
+    this.step = 11
+  }
+  etape2() {
+    this.step = 12
+  }
+  etape3() {
+    this.step = 13
+  }
+  etape4() {
+    this.step = 14
+  }
+  etape5() {
+    this.step = 15
   }
 }

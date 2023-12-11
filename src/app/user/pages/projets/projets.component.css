@@ -1,6 +1,17 @@
 
 /* General */
 
+#page-projet {
+    position: relative;
+    top: 140px;
+}
+.line-see {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    background-color: var(--blue-base);
+}
 .title-1 {
     font-size: var(--title-1);
 }
@@ -125,6 +136,9 @@
     padding: 4px 10px;
     margin: 10px 0;
 }
+.content-pro-right .row .box-projet:hover {
+    transform: scale(1.15);
+}
 .img-projet {
     margin-bottom: 10px;
     height: 140px;
@@ -235,8 +249,8 @@
 
 .projet-slider {
     width: 80%;
+    padding-bottom: 20px;
 }
-
 .p-s-row {}
 
 .img-slide img {
@@ -252,6 +266,18 @@
     grid-template-columns: 100px 30px;
     height: 4px;
     gap: 10px;
+    animation: defiler 2s linear infinite;
+}
+@keyframes defiler {
+    from {
+        grid-template-columns: 30px 100px;
+    } 
+    50% {
+        grid-template-columns: 100px 30px;
+    }
+    to {
+        grid-template-columns: 30px 100px ; 
+    }
 }
 
 .souligne-projet {
@@ -269,18 +295,22 @@
 }
 
 .search-projet {
-    width: 50%;
-    margin-left: 50%;
     border-radius: 6px;
     padding: 4px 12px;
+    min-width: 160px;
     border: 1px solid var(--blue-base);
     outline: 0px solid var(--blue-base);
 }
 
-.p-h {
+/* .p-h {
     margin: 0 40px;
-}
+} */
 
+.gen-list {
+    width: 70%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
 .projet-item {
     /* border: 2px solid black; */
 }
@@ -301,9 +331,34 @@
     border-bottom-right-radius: 60px;
 }
 
-@media screen and (max-width: 567px) {
-    .icon-image {
+@media screen and (max-width: 991px) {
+    .projet-slider {
+        width: 98%;
+    }
+    .img-slide {
         display: none;
+    }
+    .restutue {
+        width: 100%;
+    }
+    .gen-list {
+        width: 100%;
+    }
+    .p-h-right {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .p-h-left {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-projet {
+        width: 50%;
+        min-width: 140px; 
     }
 }
 
@@ -345,6 +400,26 @@
     .content-btn {
         justify-content: end;
         margin-top: 30px;
+    }
+    .icon-left {
+        display: none;
+    }
+    .p-s-row {
+        /* border: 2px solid black; */
+        width: 100% ;
+        margin-top: -20px;
+    }
+    .projet-slider {
+        /* border: 2px solid black; */
+        margin-top: 0;
+    }
+    .desc-porteur-projet {
+        /* text-align: left; */
+        /* border: 2px solid black; */
+        width: 100%;
+    }
+    .desc-porteur-projet p {
+        display: none;
     }
 }
 

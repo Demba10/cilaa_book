@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projets',
@@ -9,6 +10,10 @@ export class ProjetsComponent implements OnInit {
 
   // les attributs
 
+  constructor(
+    private router: Router
+  ) {}
+
   public show: boolean = true;
 
   ngOnInit(): void {
@@ -16,6 +21,6 @@ export class ProjetsComponent implements OnInit {
   }
 
   showDetail():void {
-    this.show = !this.show;
+    this.router.navigate(['/details'])
   }
 }

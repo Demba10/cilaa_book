@@ -5,6 +5,9 @@
 .image-background {
     
 }
+.form-control:focus {
+    box-shadow: 0 0 2px 2px var(--blue-base);
+}
 .image-background img {
     height: 100vh;
     width: 100%;
@@ -44,7 +47,8 @@
 }
 
 .form-signin {
-    width: 32%; 
+    width: 36%; 
+    min-width: 350px;
     padding: 15px 35px 45px;
     border-radius: 8px;
     margin: 0 auto;

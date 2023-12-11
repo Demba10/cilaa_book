@@ -22,13 +22,14 @@
 }
 .btn-items {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 60px;
     margin-top: 50px;
 }
 .btn-item {
     background-color: var(--blue-second);
-    width: 220px;
+    min-width: 220px;
     border: 2px solid var(--blue-second);
     border-radius: 40px;
     padding: 20px 30px;
@@ -88,7 +89,8 @@
 }
 
 .form-signin {
-    width: 32%;
+    width: 40%;
+    /* min-width: 340px; */
     padding: 15px 35px 45px;
     border-radius: 8px;
     margin: 0 auto;
@@ -117,6 +119,9 @@
         &:focus {
             z-index: 2;
         }
+    }
+    .form-control:focus {
+        box-shadow: 0 0 2px 2px var(--blue-base);
     }
 
     input[type="text"] {
@@ -180,6 +185,7 @@
     gap: 80px;
 }
 
+
 .desc-b-p {
     display: flex;
     gap: 30px;
@@ -203,4 +209,45 @@ h5.desc-b-p {
 .right-style {
     position: relative;
     top: -20px;
+}
+@media screen and (max-width: 575px) {
+    .form-signin {
+        width: 100%;
+    }
+    .btn-back {
+        /* left: 2px;
+        top: 2px;
+        background-color: var(--blue-base);
+        padding: 2px;
+        border-radius: 2px; */
+        visibility: hidden;
+    }
+    .desc-b-p {
+        display: none;
+    }
+
+    .typo-desc {
+        display: none;
+    }
+
+    .style-b-p {
+        transform: rotate(90deg);
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 991px) {
+    .form-signin {
+        width: 80%;
+    }
+
+    .desc-b-p {
+        display: none;
+    }
+
+    .typo-desc {
+        display: none;
+    }
+
+    .style-b-p {
+        transform: rotate(90deg);
+    }
 }

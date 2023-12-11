@@ -8,3 +8,7 @@
     --graisse-one: 700;
     --title-1: 48;
 }
+body {
+    overflow-x: hidden;
+    background-color: #FAF8F5;
+}

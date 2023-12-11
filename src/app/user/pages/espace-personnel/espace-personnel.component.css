@@ -1,5 +1,9 @@
 /* General */
 
+#espace-personnel {
+    position: relative;
+    top: 110px;
+}
 .title-1 {
     font-size: var(--title-1);
 }
@@ -301,6 +305,8 @@
     justify-content: end;
     margin-top: -20px;
     gap: 100px;
+    height: min-content;
+    min-width: 210px;
 }
 .content-btn .row {
     display: flex;
@@ -324,8 +330,8 @@
 .content-btn button {
     background-color: var(--blue-base);
     color: white;
-    padding: 3px 10px;
-    width: 100%;
+    padding: 3px 6px;
+    /* width: 100%; */
     font-size: 0.8em;
     border: 2px solid var(--blue-base);
     box-shadow: 0 0 2px var(--blue-base);
@@ -417,10 +423,22 @@
     gap: 50%;
 }
 .add-projet {
+    /* border: 2px solid black; */
     width: 70%;
     margin: 0 auto;
+    position: relative;
     padding: 0 40px;
-    margin-top: -86px;
+}
+.add-projet-child {
+    border: 2px solid black;
+}
+.add-projet-child .container{
+    border: 2px solid black;
+    position: relative;
+    top: -118px;
+}
+.add-projet-child .container .desc-step {
+    margin: 0px !important;
 }
 .img-login-one {
 }
@@ -450,7 +468,7 @@ p {
     display: flex;
     justify-content: space-between;
     position: relative;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     top: 140px;                                                     
 }
 .back-next {
@@ -467,5 +485,71 @@ p {
     width: 100%;
 }
 .title-step {
+    color: white;
+}
+.box-add {
+    height: 360px;
+    border-radius: 20px;
+    box-shadow: 0 0 4px var(--blue-base);
+}
+.img-add-box {
+    height: 360px;
+    /* overflow-y: visible !important; */
+}
+.img-add-box img {
+    width: 100%;
+    position: relative;
+}
+.step-box {
+    background-color: var(--blue-base);
+    color: white;
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.cta-next-back {
+    position: absolute;
+    width: calc(94% - 40px);
+    top: 300px;
+}
+/* .cnb {
+    display: flex;
+    justify-content: space-between;
+} */
+.cta-next-back .btn{
+    background-color: black;
+    color: white;
+    border: 0;
+    width: 76px;
+    box-sizing: border-box;
+    font-size: 0.7em;
+}
+.navbar-nav li {
+    cursor: pointer;
+    margin-right: 0 8px;
+}
+.navbar-nav li a {
+    color: var(--blue-base);
+}
+#navbarNavDropdown-nav li a:first-child {
+    font-weight: 700;
+}
+#navbarNavDropdown .nav-item {
+    display: flex;
+    align-items: center;
+}
+#navbarNavDropdown .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.circle-step {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--Orange-first);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
 }

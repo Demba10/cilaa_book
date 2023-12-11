@@ -1,0 +1,106 @@
+#profil {
+    position: relative;
+    top: 130px;
+}
+.img-profil-round {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    margin-top: -40px;
+    left: calc(50% - 40px);
+    background-color: var(--blue-base);
+}
+.img-profil-round img {
+    height: 100%;
+}
+.desc-profil {
+    text-align: center;
+    margin: 20px 0;
+}
+.line-profil {
+    display: flex;
+    flex-direction: column;
+} 
+.line-profil .input-group-text {
+    display: flex;
+}
+.input-group-box {
+    margin: 6px 0;
+}
+.box-profil {
+    /* border: 2px solid black; */
+    border-radius: 6px;
+    /* padding: 20px; */
+    background-color: white;
+    box-shadow: 0 0 4px var(--blue-base);
+    padding: 0;
+}
+.recap-profil {
+    box-shadow: 0 0 4px var(--blue-base);
+}
+.recap-profil .card-title {
+    font-weight: 700;
+    color: var(--blue-base);
+}
+.header-profil {
+    background-color: var(--blue-base);
+    padding: 0 20px;
+    height: 50px;
+    align-items: center;
+}
+.header-profil h6 {
+    color: white;
+}
+.body-profil {
+    padding: 20px;
+}
+.body-profil label {
+    font-weight: 700;
+    color: var(--blue-base);
+}
+.body-profil input {
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid var(--blue-base);
+    border-radius: 0 !important;
+}
+.body-profil input:focus {
+    border: 0;
+    outline: none;
+}
+.form-control:focus {
+    border-color: var(--orange-second) !important;
+    box-shadow: 0 0 4px 3px var(--orange-second) !important;
+}
+.body-profil-2 .input-group {
+    gap: 30px;
+    align-items: center;
+}
+.body-profil-2 .input-group label{
+    min-width: 100px;
+}
+.body-profil-2 .input-group h6 {
+    padding: 10px 0;
+    /* background-color: var(--orange-second); */
+    border-bottom: 4px solid var(--orange-second);
+}
+.valide-update .btn {
+    background-color: var(--blue-base)
+}
+.valide-update .btn:hover {
+    background-color: var(--Orange-first)
+}
+.cta-profil .btn {
+    padding: 4px 10px;
+    font-size: 0.7em;
+    color: var(--blue-second);
+    color: white;
+}
+.cta-profil .btn:hover {
+    background-color: var(--orange-second);
+}

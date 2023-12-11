@@ -1,27 +1,31 @@
-<div id="page-projet" >
-    <div >
+<app-header></app-header>
+<div id="page-projet">
+    <div>
         <section class="projet-slider container">
             <div class="p-s-row row">
                 <div class="img-slide col-4 ">
                     <img src="assets/images/welcome.png" alt="">
                 </div>
-                <div class="global-des-porteur col-6">
+                <div class="global-des-porteur col-lg-6 col-10">
                     <div class="desc-porteur-projet ">
-                        <h1>Ce propose les porteurs de projet</h1>
+                        <h1>Ce que propose les porteurs de projet</h1>
                         <p>Trouver dans cette page tous les projet que proposent les jeunes porteurs de projet recherchant des
                             bailleurs pour leurs
                             financés</p>
                     </div>
                 </div>
-                <div class="icon-left col-2 ">
+                <div class="icon-left col-2">
                     <img src="assets/images/icon-1.png" alt="">
                 </div>
             </div>
         </section>
+        <div class="line-see">
+
+        </div>
         <div id="projet" style="margin: 30px 0;">
             <div class="container">
                 <div class="projet-head row">
-                    <div class="col-6">
+                    <div class="restutue col-12 col-md-9">
                         <div class="p-h p-h-left">
                             <h4 class="blue-color">Lancez-vous dans le financement</h4>
                             <div class="souligne">
@@ -33,11 +37,10 @@
                                 Ensemble, faites la différence et créer un impact significatif.</p>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="p-h p-h-right">
+                    <div class="col-12 col-lg-3">
+                        <div class="p-h p-h-right w-100">
                             <input type="text" placeholder="Rechercher" class="search-projet">
                         </div>
-        
                     </div>
                 </div>
                 <div class="row">
@@ -49,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <section class="container" style="width: 70%; margin-top: 40px; margin-bottom: 40px;">
+        <section class="gen-list container">
             <div class="projet-list row">
                 <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
                     <div class="icon-image">
@@ -292,155 +295,5 @@
             </div>
         </section>
     </div>
-
-    <div class="details container" *ngIf="!show">
-        <section class="profil-banner  row d-flex" id="profil-banner">
-            <div class="col-8">
-                <div class="profil-banner-left d-flex m-3">
-                    <div class="left-img">
-                        <div class="middle-cirle">
-                            <div class="last-circle">
-                                <img src="https://media.gettyimages.com/id/1371301907/fr/photo/jeune-homme-sympathique-portant-une-chemise-en-jean.jpg?s=612x612&w=0&k=20&c=sL711u097GPHauXnVdkiprYJ3Pgiy_MABJKnS_Nrz6o="
-                                    alt="" class="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <h2>
-                            Andre Demba Ndione
-                        </h2>
-                        <p>
-                            Porteur de projet
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="profil-banner-right">
-                    <img src="assets/images/icon-profil.png" alt="">
-                </div>
-            </div>
-        </section>
-    
-        <div class="line-blue container-fluid">
-            
-        </div>
-    
-        <section class="box-details">
-            <div class="container">
-                <div class="title-box row mt-5">
-                    <div class="col-7"><h6 class="ms-3">DETAILS DU PROJET</h6></div>
-                    <div class="col-5 d-flex" style="justify-content: space-between; align-items: center;"><h6>SES AUTRES PROJETS</h6> <input type="text" name="" id="" placeholder="Rechercher" class="p-1"> </div>
-                </div>
-                <div class="row mt-0">
-                    <div class="col-7 p-2">
-                        <div class="content-pro-left content-pro">
-                            <div class="row">
-                                <div class="col-7">
-                                    <div class="component-all">
-                                        <div class="component-title-desc">
-                                            <h6>TITRE</h6>
-                                            <span class="underline"></span>
-                                            <p>CILAA BOOK</p>
-                                        </div>
-                                        <div class="component-title-desc">
-                                            <h6>DATE</h6>
-                                            <span class="underline"></span>
-                                            <p>20/12/2023</p>
-                                        </div>
-                                        <div class="component-title-desc">
-                                            <h6>DESCRIPTION</h6>
-                                            <span class="underline"></span>
-                                            <p>Cilabook est née de la vision d’un groupe de passionnés convaincus que chaque
-                                                idée mérite une chance de se développer,
-                                                et que chaque entrepreneur ou porteur de projet mérite l’opportunité de voir
-                                                son rêve se concrétiser.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <div class="component-all">
-                                        <div class="img-projet">
-                                            <img src="https://media.gettyimages.com/id/549809269/fr/photo/portrait-of-men-and-woman-with-pen-and-paper.jpg?s=612x612&w=0&k=20&c=61XOM8xG3YWsEDj7i6MpZPuu5R0qBaL8VTOmkdgJW9o="
-                                                alt="">
-                                        </div>
-                                        <div class="component-title-desc">
-                                            <h6>DOMAINE D'ACTIVITE</h6>
-                                            <span class="underline"></span>
-                                            <p>Entreprenariat</p>
-                                        </div>
-                                    </div>
-                                    <div class="component-btn">
-                                        <button type="button" class="btn-all btn btn-primary">Contacter</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-5 p-2">
-                        <div class="content-pro content-pro-right">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="box-projet">
-                                        <div class="b-p-top">
-                                            <h6 class="typo">Guerté Gui</h6>
-                                            <i class="fa-solid fa-eye"></i>
-                                        </div>
-                                        <p>Domaine agricole</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="box-projet">
-                                        <div class="b-p-top">
-                                            <h6 class="typo">Guerté Gui</h6>
-                                            <i class="fa-solid fa-eye"></i>
-                                        </div>
-                                        <p>Domaine agricole</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="box-projet">
-                                        <div class="b-p-top">
-                                            <h6 class="typo">Guerté Gui</h6>
-                                            <i class="fa-solid fa-eye"></i>
-                                        </div>
-                                        <p>Domaine agricole</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="box-projet">
-                                        <div class="b-p-top">
-                                            <h6 class="typo">Guerté Gui</h6>
-                                            <i class="fa-solid fa-eye"></i>
-                                        </div>
-                                        <p>Domaine agricole</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="box-projet">
-                                        <div class="b-p-top">
-                                            <h6 class="typo">Guerté Gui</h6>
-                                            <i class="fa-solid fa-eye"></i>
-                                        </div>
-                                        <p>Domaine agricole</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="box-projet">
-                                        <div class="b-p-top">
-                                            <h6 class="typo">Guerté Gui</h6>
-                                            <i class="fa-solid fa-eye"></i>
-                                        </div>
-                                        <p>Domaine agricole</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+    <app-footer></app-footer>
 </div>
-
-

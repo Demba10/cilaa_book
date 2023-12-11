@@ -1,0 +1,118 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+.navbar{
+  background-color: #ffffff;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+  top: 0;
+  box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.firstCouche{
+  background-color: #023047;
+  height: 35px;
+  width: 100%;
+  text-decoration: none;
+
+}
+
+.firstCouche ul li{
+  margin-right: 0.35rem;
+  padding-top: 3px;
+
+}
+
+.firstCouche ul {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  list-style: none;
+}
+
+.firstCouche ul li i{
+  color: #ffffff;
+  font-size: 0.750rem;
+  padding: 6px 5px 0 0;
+  border: 1px solid #ffffff;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.navbar-brand img{
+  width: 23%;
+}
+
+.navbar-nav{
+  display: flex;
+  justify-content: center;
+  margin-left: -14rem;
+}
+
+.btn{
+  background-color: #023047;
+  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  margin-left: -4rem;
+}
+
+.btn:hover{
+  background-color: #FB8500;
+}
+
+header{
+  top: 0;
+}
+
+ul li a{
+  font-weight: 600;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: black;
+}
+
+@media screen and (max-width: 1195px){
+  .navbar-nav{
+    display: flex;
+      justify-content: center;
+      margin-left: -19rem;
+  }
+}
+@media screen and (max-width: 1050px){
+  .navbar-nav{
+    display: flex;
+      justify-content: center;
+      margin-left: -23rem;
+  }
+}
+@media screen and (max-width: 666px){
+  .navbar-toggler{
+    margin-left: 35.5rem;
+    margin-top: -4rem;
+  }
+}
+@media screen and (max-width: 635px){
+  .firstCouche{
+    display: none;
+  }
+}
+@media screen and (max-width: 992px){
+  .navbar-nav{
+    display: flex;
+      justify-content: center;
+      margin-left: 0.5rem;
+  }
+
+    .btn {
+      background-color: #023047;
+      color: #ffffff;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      margin-left: 0.4rem;
+    }
+}
+
+ul li a:hover{
+  color: #fa8602;
+}

@@ -33,16 +33,22 @@ export class LoginComponent implements OnInit {
   registered() {
     this.router.navigate(['/register']);
   }
-
   connexion() {
-    // if (this.users.find(ele => ele.email == this.email && ele.password == this.psw)) {
-    //   this.userAuth$ = this.email;
-    // } else {
-    // }
-    // Swal.fire({
-    //   title: 'erreur',
-    //   text: 'Données invalides',
-    //   icon: 'error'
-    // })
+    const us = {
+      email: this.email,
+      password: this.psw
+    }
+    this.log.posLogin(us).subscribe(
+      response => {
+        console.log(response);
+        localStorage.setItem('userOnline', JSON.stringify(response));
+        Swal.fire({
+          title: 'success',
+          text: 'Connexion reussie',
+          icon: 'success'
+        })
+        this.router.navigate(['accueil']);
+      }
+    )
   }
-  }
+}

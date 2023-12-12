@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Porteur } from 'src/app/models/porteur.model';
 import { User } from 'src/app/models/user.model';
 import { RegisterService } from 'src/app/services/register/register.service';
 import Swal from 'sweetalert2';
@@ -20,6 +22,7 @@ export class RegisterComponent implements OnInit {
   psw!: any;
   adress!: any;
   image!: any;
+  role = 2;
   statut!: string;
   exactNom!: boolean;
   verifNom!: string;
@@ -28,19 +31,41 @@ export class RegisterComponent implements OnInit {
   exactPassword!: boolean;
   verifPassword!: string;
   idLastUser!: number;
+  usersBailleurs: any[] = [];
 
   constructor(
-    private register: RegisterService,
+    private register: RegisterService, router: Router
   ) { }
 
   ngOnInit(): void {
     this.updateStage();
+    if (!!localStorage.getItem('bailleurs')) {
+      localStorage.setItem('bailleurs', JSON.stringify(this.usersBailleurs))
+    }
   }
 
   ajouterBailleur() {
-    const us = new User(this.nom, this.adress,this.tel, this.image, this.statut, 'bailleur', this.psw, this.email,)
+    const us = new User(this.nom, this.adress,this.tel, this.statut, 3, this.psw, this.email)
     this.register.postBailleur(us).subscribe(
       response => {
+        Swal.fire({
+          title: 'success',
+          text: 'Compte Enregister',
+          icon: 'success'
+        })
+        console.log(response);
+      }
+    )
+  }
+  ajouterPorteur() {
+    const us = new Porteur(this.nom, this.adress,this.tel, this.role, this.psw, this.email)
+    this.register.postPorteur(us).subscribe(
+      response => {
+        Swal.fire({
+          title: 'success',
+          text: 'Compte Enregister',
+          icon: 'success'
+        })
         console.log(response);
       }
     )

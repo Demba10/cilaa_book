@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common'
 import { LoginComponent } from './user/pages/auth/login/login.component';
+import { ContactComponent } from './user/pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LoginComponent } from './user/pages/auth/login/login.component';
     DetailsProjetComponent,
     BailleurDetailsComponent,
     ProfilComponent,
-    LoginComponent
+    LoginComponent,
+    ContactComponent
 
   ],
   imports: [

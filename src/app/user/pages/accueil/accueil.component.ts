@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/services/login/login.service';
+import { ProjetService } from 'src/app/services/projet/projet.service';
 import { RegisterService } from 'src/app/services/register/register.service';
 
 @Component({
@@ -9,21 +11,26 @@ import { RegisterService } from 'src/app/services/register/register.service';
 export class AccueilComponent implements OnInit {
 
   users!: any;
+  userAth!: any;
+  user!: any;
+  projets!: any[];
 
   constructor(
-    private bailleur: RegisterService
+    private bailleur: RegisterService,
+    private log: LoginService,
+    private projet: ProjetService
   ) { }
 
   ngOnInit(): void {
-    this.bailleur.getBailleurs().subscribe(
+    this.user = localStorage.getItem('userOnline');
+    console.log(this.user); 
+  
+    this.projet.getProjet().subscribe(
       response => {
-        this.users = response;
-        console.log(this.users);
-        }
-    )
-    
+        this.projets = response;
+        console.log(this.projets);
+        
+      }
+    ) 
   }
-
-
-
 }

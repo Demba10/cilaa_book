@@ -28,7 +28,7 @@
     </section>
     <section class="container" style="width: 70%; margin-top: 40px; margin-bottom: 40px;"  *ngIf="switch === 1">
         <div class="contenu-page">
-            <div class="projet-list row">
+            <div class="projet-list row" *ngFor="let projetSpecifique of projetSpecifiques">
                 <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
                     <div class="icon-image">
         
@@ -36,74 +36,19 @@
                 </div>
                 <div class="middle-projet col-12 col-md-6 col-lg-6">
                     <div class="titre-projet">
-                        <h4>Cilla Book </h4>
+                        <h4> {{projetSpecifique.titre}} </h4>
                     </div>
                     <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
+                        {{projetSpecifique.description}}
                     </div>
                     <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3 border border-black">
-                    <div class="row">
-                        <div class="cta-porteur col"><button>supprimer</button></div>
-                        <div class="cta-porteur col"><button>modifier</button></div>
-                        <div class="cta-porteur col"><button>détails</button></div>
-                    </div>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
+                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine {{projetSpecifique.categorie_id}}</div>
                         <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
                     </div>
                 </div>
                 <div class="content-btn col-12 col-md-12 col-lg-3">
                     <div class="row">
-                        <div class="cta-porteur col"><button>supprimer</button></div>
-                        <div class="cta-porteur col"><button>modifier</button></div>
-                        <div class="cta-porteur col"><button>détails</button></div>
-                    </div>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3">
-                    <div class="row">
-                        <div class="cta-porteur col"><button>supprimer</button></div>
+                        <div class="cta-porteur col" (click)="supprimerProjet(projetSpecifique.id)"><button>supprimer</button></div>
                         <div class="cta-porteur col"><button>modifier</button></div>
                         <div class="cta-porteur col"><button>détails</button></div>
                     </div>
@@ -192,7 +137,7 @@
                                 <p>Quel est le nom de votre projet ?</p>
                                 <div class="input-group flex-nowrap">
                                     <input type="text" class="form-control" placeholder="Nom du projet" aria-label="Username"
-                                        aria-describedby="addon-wrapping">
+                                        aria-describedby="addon-wrapping" name="titre" [(ngModel)]="titre">
                                 </div>
                                 <div class="cta-next-back">
                                     <button type="button" class="btn btn-primary" style="visibility: hidden;">Précedant</button>
@@ -201,11 +146,9 @@
                             </div>
                             <div class="step-input" *ngIf="step == 12">
                                 <p>Quel est le dommaine d'activité du projet ?</p>
-                                <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                                <select class="form-select form-select-lg mb-3" aria-label="Large select example" name="categorie_id" [(ngModel)]="categorie_id">
                                     <option selected>-- Domaine d'activité --</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="{{categorie.id}}" *ngFor="let categorie of categories; let index = index">{{categorie.nom}}</option>
                                 </select>
                                 <div class="cta-next-back">
                                     <div class="cnb">
@@ -218,8 +161,9 @@
                                 <p>Décrivez  le projet en quelques mots.</p>
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
-                                        style="height: 40px"></textarea>
+                                        style="height: 40px" [(ngModel)]="description" name="description"> </textarea> 
                                     <label for="floatingTextarea2">Comments</label>
+                                    <p> {{description}} </p>
                                 </div>
                                 <div class="cta-next-back">
                                     <button type="button" class="btn btn-primary" (click)="etape2()">Précedant</button>
@@ -229,8 +173,9 @@
                             <div class="step-input"  *ngIf="step == 14">
                                 <p>Représentez le projet par une image.</p>
                                 <div style="">
-                                    <input type="file" style="border: 2px solid white; width: 100%; border-radius: 6px;">
+                                    <input type="text" style="border: 2px solid white; width: 100%; border-radius: 6px;" name="image" [(ngModel)]="image">
                                 </div>
+                                <p> {{image}} </p>
                                 <div class="cta-next-back">
                                     <button type="button" class="btn btn-primary" (click)="etape3()">Précedant</button>
                                     <button type="button" class="btn btn-primary" (click)="etape5()">Suivant</button>
@@ -240,7 +185,7 @@
                                 <p>Vous y etes, veuillez vérifier les informations avant d'enregistrer les modifications.</p>
                                 <div class="cta-next-back">
                                     <button type="button" class="btn btn-primary" (click)="etape3()">Précedant</button>
-                                    <button type="button" class="btn btn-primary" (click)="etape5()">Suivant</button>
+                                    <button type="button" class="btn btn-primary" (click)="envoyerProjet()">Enregistrer</button>
                                 </div>
                             </div>
                         </div>

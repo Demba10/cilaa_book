@@ -430,10 +430,10 @@
     padding: 0 40px;
 }
 .add-projet-child {
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 .add-projet-child .container{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     position: relative;
     top: -118px;
 }

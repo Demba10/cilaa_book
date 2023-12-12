@@ -32,7 +32,16 @@
           <a class="nav-link" href="#">A propos</a>
         </li>
       </ul>
-        <button class="btn " type="submit" routerLink="/login">Se connecter <i class='bx bxs-user'></i></button>
+        <div class="dropdown" *ngIf="userAuth">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ user.user.nom }}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Profil</a></li>
+            <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+          </ul>
+        </div>
+        <button class="btn " type="submit" routerLink="/login" *ngIf="!userAuth">Se connecter <i class='bx bxs-user'></i></button>
     </div>
   </div>
 </nav>

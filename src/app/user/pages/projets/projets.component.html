@@ -53,244 +53,26 @@
             </div>
         </div>
         <section class="gen-list container">
-            <div class="projet-list row">
+            <div class="projet-list row"  *ngFor="let projet of projets; let index = index">
                 <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
                     <div class="icon-image">
         
                     </div>
                 </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
+                <div class="middle-projet col-6 col-md-6 col-lg-6">
                     <div class="titre-projet">
-                        <h4>Cilla Book </h4>
+                        <h4> {{projet.titre}}</h4>
                     </div>
                     <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
+                        {{projet.description}}
                     </div>
                     <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
+                        <div class="domaine"><i class="fa-solid fa-layer-group"></i>Domaine {{categories[index]}} </div>
                         <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
                     </div>
                 </div>
                 <div class="content-btn col-12 col-md-12 col-lg-3">
                     <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3">
-                    <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3">
-                    <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3">
-                    <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3">
-                    <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3">
-                    <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3">
-                    <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3">
-                    <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3">
-                    <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
-                </div>
-            </div>
-            <div class="projet-list row">
-                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
-                    <div class="icon-image">
-        
-                    </div>
-                </div>
-                <div class="middle-projet col-12 col-md-6 col-lg-6">
-                    <div class="titre-projet">
-                        <h4>Cilla Book </h4>
-                    </div>
-                    <div class="desc-projet my-1">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur officiis adipisci, harum ea
-                        fuga sunt minus autem asperiores aut eos similique.
-                    </div>
-                    <div class="another-infos d-flex gap-4">
-                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine elevage</div>
-                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
-                    </div>
-                </div>
-                <div class="content-btn col-12 col-md-12 col-lg-3">
-                    <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
-                </div>
-            </div>
-            <div class="pagination row">
-                <div class="pagination-box d-flex">
-                    <div class="col"><i class="fa-solid fa-chevron-left"></i></div>
-                    <div class="col">1</div>
-                    <div class="col">2</div>
-                    <div class="col">3</div>
-                    <div class="col">4</div>
-                    <div class="col"><i class="fa-solid fa-chevron-right"></i></div>
                 </div>
             </div>
         </section>

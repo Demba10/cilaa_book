@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class RegisterService {
 
-  private baseURL = "http://127.0.0.1:8000/api/registerBailleur";
+  private baseURL = "http://127.0.0.1:8000/api/register";
 
   constructor(
     private http: HttpClient,
@@ -22,4 +22,10 @@ export class RegisterService {
   getBailleurs(): Observable<any[]> {
     return this.http.get<any[]>(this.baseURL);
   }
-}
+  postPorteur(user: any): Observable<any> {
+    return this.http.post<any>(this.baseURL, user);
+  }
+  getPorteur(): Observable<any[]> {
+    return this.http.get<any[]>(this.baseURL);
+  }
+} 

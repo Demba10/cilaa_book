@@ -1,0 +1,125 @@
+    <app-header></app-header>
+    <div id="profil">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-group">
+                        <div class="recap-profil card">
+                            <img src="https://media.gettyimages.com/id/1340900360/fr/photo/arrow-city.jpg?s=612x612&w=0&k=20&c=xGv6ow1siP1Vw_qMre_noT_Z0VQOJvlTlTJHmSH_auw=" class="card-img-top"
+                                alt="Hollywood Sign on The Hill" />
+                            <div class="img-profil-round">
+                                <img src="https://media.gettyimages.com/id/985138634/fr/photo/portrait-of-smiling-young-man-wearing-eyeglasses.jpg?s=612x612&w=0&k=20&c=z-7NSgSFBl8yw1DiPSDrKMLy66m6HqNbfZGV1vCwfDU=" alt="" class="">
+                            </div>
+                            <div class="desc-profil card-body">
+                                <h5 class="card-title">Moustapha Diédhiou</h5>
+                                <p class="card-text">Bailleur</p>
+                            </div>
+                            <div class="card-footer">
+                                <p class="text-muted" style="text-align: center !important;">Compte crée le 20 fevrier 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-profil col-8">
+                    <div class="header-profil d-flex justify-content-between">
+                        <h6 class="mt-2">Informations</h6>
+                        <div class="cta-profil d-flex gap-2" *ngIf="!isUpdating">
+                            <button type="button" class="btn btn-primary p-1">Supprimer</button>
+                            <button type="button" class="btn btn-primary p-1" (click)="isUpdatingFunction()">Modifier</button>
+                        </div>
+                    </div>
+                    <div class="body-profil body-profil-2" *ngIf="!isUpdating">
+                        <h6 style="color: var(--orange-second); font-weight: 700;">INFORMATIONS UTILISATEUR</h6>
+                        <div class="row">
+                            <div class="input-group-box d-flex justify-content-between gap-4">
+                                <div class="input-group flex-nowrap">
+                                    <label for="">Adresse Email</label>
+                                    <h6>moustapha&#64;gmal.com</h6>
+                                </div>
+                                <div class="input-group flex-nowrap d-flex">
+                                    <label for="">Téléphone</label>
+                                    <h6>786547354</h6>
+                                </div>
+                            </div>
+                            <div class="input-group-box d-flex justify-content-between gap-4">
+                                <div class="input-group flex-nowrap">
+                                    <label for="">Prénom</label>
+                                    <h6>Moustapha</h6>
+                                </div>
+                                <div class="input-group flex-nowrap d-flex">
+                                    <label for="">Nom</label>
+                                    <h6>Diédhiou</h6>
+                                </div>
+                            </div>
+                            <div class="input-group-box d-flex justify-content-between gap-4">
+                                <div class="input-group flex-nowrap">
+                                    <label for="">Adresse</label>
+                                    <h6>Dakar</h6>
+                                </div>
+                                <div class="input-group flex-nowrap d-flex">
+                                    <label for="">Profession</label>
+                                    <h6>Développeur</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="body-profil" *ngIf="isUpdating">
+                        <h6 style="color: var(--orange-second); font-weight: 700;">EDITEUR DU COMPTE</h6>
+                        <div class="row">
+                            <div class="input-group-box d-flex justify-content-between gap-4">
+                                <div class="input-group flex-nowrap flex-column">
+                                    <label for="">Adresse Email</label>
+                                    <input type="text" class="form-control w-100" placeholder="moustapha@gmal.com">
+                                </div>
+                                <div class="input-group flex-nowrap d-flex flex-column">
+                                    <label for="">Téléphone</label>
+                                    <input type="text" class="form-control w-100" placeholder="786547354" aria-label="Username"
+                                        aria-describedby="addon-wrapping">
+                                </div>
+                            </div>
+                            <div class="input-group-box d-flex justify-content-between gap-4">
+                                <div class="input-group flex-nowrap flex-column">
+                                    <label for="">Adresse Email</label>
+                                    <input type="text" class="form-control w-100" placeholder="moustapha@gmal.com" aria-label="Username"
+                                        aria-describedby="addon-wrapping">
+                                </div>
+                                <div class="input-group flex-nowrap d-flex flex-column">
+                                    <label for="">Téléphone</label>
+                                    <input type="text" class="form-control w-100" placeholder="786547354" aria-label="Username"
+                                        aria-describedby="addon-wrapping">
+                                </div>
+                            </div>
+                            <div class="input-group-box d-flex justify-content-between gap-4">
+                                <div class="input-group flex-nowrap flex-column">
+                                    <label for="">Adresse Email</label>
+                                    <input type="text" class="form-control w-100" placeholder="moustapha@gmal.com" aria-label="Username"
+                                        aria-describedby="addon-wrapping">
+                                </div>
+                                <div class="input-group flex-nowrap d-flex flex-column">
+                                    <label for="">Téléphone</label>
+                                    <input type="text" class="form-control w-100" placeholder="786547354" aria-label="Username"
+                                        aria-describedby="addon-wrapping">
+                                </div>
+                            </div>
+                            <div class="input-group-box d-flex justify-content-between gap-4">
+                                <div class="input-group flex-nowrap flex-column">
+                                    <label for="">Adresse Email</label>
+                                    <input type="text" class="form-control w-100" placeholder="moustapha@gmal.com" aria-label="Username"
+                                        aria-describedby="addon-wrapping">
+                                </div>
+                                <div class="input-group flex-nowrap flex-column">
+                                    <label for=""></label>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="valide-update d-flex justify-content-end gap-4">
+                            <button type="button" class="btn btn-primary" (click)="isUpdatingFunction()" style="">Annuler</button> 
+                            <button type="button" class="btn btn-primary">Enregistrer</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </div>

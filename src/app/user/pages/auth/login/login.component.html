@@ -1,0 +1,19 @@
+<div class="login container-fluid">
+    <div class="image-background">
+        <img src="assets/images/login-1.jpg" alt="">
+    </div>
+    <div class="login-box">
+    </div>
+    <div class="wrapper">
+        <form class="form-signin">
+            <h2 class="form-signin-heading text-center">Connexion</h2>
+            <input type="text" class="form-control" name="email" placeholder="Adresse Email" [(ngModel)]="email" required="" autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Mot de passe" required="" [(ngModel)]="psw" />
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Se souvenir de moi
+            </label>
+            <button class="btn-login btn btn-lg btn-primary btn-block w-100" type="submit" (click)="connexion()">Login</button>
+            <p>Vous n'avez pas de compte ? <span class="no-account" (click)="registered()" style="cursor: pointer;">S'inscrire</span></p>
+        </form>
+    </div>  
+</div>

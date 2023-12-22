@@ -1,0 +1,200 @@
+<app-header></app-header>
+<div id="espace-personnel">
+    <section id="projet" style="margin: 30px auto; width: 70%;" class="">
+        <div class="container-fluid">
+            <div class="projet-head row">
+                <div class="col-6 d-flex">
+                    <div class="p-h p-h-left" (click)="swichter1()">
+                        <h5 class="blue-color">Mes projets</h5>
+                        <div class="souligne" *ngIf="switch == 1">
+                            <span class="s-1"></span>
+                        </div>
+                    </div>
+                    <div class="p-h p-h-left" (click)="swichter2()">
+                        <h5 class="blue-color">Ajouter un projet</h5>
+                        <div class="souligne" *ngIf="switch == 2">
+                            <span class="s-1"></span>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-6">
+                        <div class="p-h p-h-right">
+                            <input type="text" placeholder="Rechercher" class="search-projet">
+                        </div>
+                    
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="container" style="width: 70%; margin-top: 40px; margin-bottom: 40px;"  *ngIf="switch === 1">
+        <div class="contenu-page">
+            <div class="projet-list row" *ngFor="let projetSpecifique of projetSpecifiques">
+                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
+                    <div class="icon-image">
+        
+                    </div>
+                </div>
+                <div class="middle-projet col-12 col-md-6 col-lg-6">
+                    <div class="titre-projet">
+                        <h4> {{projetSpecifique.titre}} </h4>
+                    </div>
+                    <div class="desc-projet my-1">
+                        {{projetSpecifique.description}}
+                    </div>
+                    <div class="another-infos d-flex gap-4">
+                        <div class="domaine"><i class="fa-solid fa-layer-group"></i> Domaine {{projetSpecifique.categorie_id}}</div>
+                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
+                    </div>
+                </div>
+                <div class="content-btn col-12 col-md-12 col-lg-3">
+                    <div class="row">
+                        <div class="cta-porteur col" (click)="supprimerProjet(projetSpecifique.id)"><button>supprimer</button></div>
+                        <div class="cta-porteur col"><button>modifier</button></div>
+                        <div class="cta-porteur col"><button>détails</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination row">
+            <div class="pagination-box d-flex">
+                <div class="col"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="col">1</div>
+                <div class="col">2</div>
+                <div class="col">3</div>
+                <div class="col">4</div>
+                <div class="col"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </section>
+    <section class="add-projet" *ngIf="switch === 2">
+        <main class="add-projet-child d-flex align-items-center min-vh-100 py-3 py-md-0">
+            <div class="container m-0">
+                <div class="desc-step m-0">
+                    <!-- <div class="one-by-one">
+                        <div class="number">
+                            <span>1</span>
+                        </div>
+                        <h6>Nom du projet</h6>
+                    </div> -->
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 my-3" style="background-color: transparent !important;">
+                        <div class="container-fluid p-0">
+                            <!-- <a class="navbar-brand" href="#">Navbar</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button> -->
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <div class="circle-step">
+                                            <span>1</span>
+                                        </div>
+                                        <a class="nav-link">Nom du projet</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="circle-step">
+                                            <span>1</span>
+                                        </div>
+                                        <a class="nav-link">Secteur</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="circle-step">
+                                            <span>1</span>
+                                        </div>
+                                        <a class="nav-link">Description</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="circle-step">
+                                            <span>1</span>
+                                        </div>
+                                        <a class="nav-link">Image</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <div class="circle-step">
+                                            <span>1</span>
+                                        </div>
+                                        <a class="nav-link">Enregistrement</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="box-add card login-card">
+                    <div class="row no-gutters">
+                        <div class="img-add-box col-md-5">
+                            <img src="assets/images/welcome-2.png" alt="login" class="login-card-img">
+                        </div>
+                        <div class="step-box col-md-7">
+                            <div class="step-add">
+                                <h3 *ngIf="step == 11">Etape 1</h3>
+                                <h3 *ngIf="step == 12">Etape 2</h3>
+                                <h3 *ngIf="step == 13">Etape 3</h3>
+                                <h3 *ngIf="step == 14">Etape 4</h3>
+                                <h3 *ngIf="step == 15">Etape 5</h3>
+                            </div>
+                            <div class="step-input" *ngIf="step == 11">
+                                <p>Quel est le nom de votre projet ?</p>
+                                <div class="input-group flex-nowrap">
+                                    <input type="text" class="form-control" placeholder="Nom du projet" aria-label="Username"
+                                        aria-describedby="addon-wrapping" name="titre" [(ngModel)]="titre">
+                                </div>
+                                <div class="cta-next-back">
+                                    <button type="button" class="btn btn-primary" style="visibility: hidden;">Précedant</button>
+                                    <button type="button" class="btn btn-primary" (click)="etape2()">Suivant</button>
+                                </div>
+                            </div>
+                            <div class="step-input" *ngIf="step == 12">
+                                <p>Quel est le dommaine d'activité du projet ?</p>
+                                <select class="form-select form-select-lg mb-3" aria-label="Large select example" name="categorie_id" [(ngModel)]="categorie_id">
+                                    <option selected>-- Domaine d'activité --</option>
+                                    <option value="{{categorie.id}}" *ngFor="let categorie of categories; let index = index">{{categorie.nom}}</option>
+                                </select>
+                                <div class="cta-next-back">
+                                    <div class="cnb">
+                                        <button type="button" class="btn btn-primary" (click)="etape1()">Précedant</button>
+                                        <button type="button" class="btn btn-primary" (click)="etape3()">Suivant</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step-input"  *ngIf="step == 13">
+                                <p>Décrivez  le projet en quelques mots.</p>
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                        style="height: 40px" [(ngModel)]="description" name="description"> </textarea> 
+                                    <label for="floatingTextarea2">Comments</label>
+                                    <p> {{description}} </p>
+                                </div>
+                                <div class="cta-next-back">
+                                    <button type="button" class="btn btn-primary" (click)="etape2()">Précedant</button>
+                                    <button type="button" class="btn btn-primary" (click)="etape4()">Suivant</button>
+                                </div>
+                            </div>
+                            <div class="step-input"  *ngIf="step == 14">
+                                <p>Représentez le projet par une image.</p>
+                                <div style="">
+                                    <input type="text" style="border: 2px solid white; width: 100%; border-radius: 6px;" name="image" [(ngModel)]="image">
+                                </div>
+                                <p> {{image}} </p>
+                                <div class="cta-next-back">
+                                    <button type="button" class="btn btn-primary" (click)="etape3()">Précedant</button>
+                                    <button type="button" class="btn btn-primary" (click)="etape5()">Suivant</button>
+                                </div>
+                            </div>
+                            <div class="step-input"  *ngIf="step == 15">
+                                <p>Vous y etes, veuillez vérifier les informations avant d'enregistrer les modifications.</p>
+                                <div class="cta-next-back">
+                                    <button type="button" class="btn btn-primary" (click)="etape3()">Précedant</button>
+                                    <button type="button" class="btn btn-primary" (click)="envoyerProjet()">Enregistrer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <div style="">
+        <app-footer></app-footer>
+    </div>
+</div>

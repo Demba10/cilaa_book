@@ -1,0 +1,14 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+:root {
+    --blue-base: #023047;
+    --blue-second: #219EBC;
+    --blue-thre: #8ECAE6;
+    --Orange-first: #FB8500;
+    --orange-second: #FFB703;
+    --graisse-one: 700;
+    --title-1: 48;
+}
+/* body {
+    overflow-x: hidden;
+    background-color: #FAF8F5;
+} */

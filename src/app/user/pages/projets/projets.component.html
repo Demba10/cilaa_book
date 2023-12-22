@@ -1,1 +1,81 @@
-<p>projets works!</p>
+<app-header></app-header>
+<div id="page-projet">
+    <div>
+        <section class="projet-slider container">
+            <div class="p-s-row row">
+                <div class="img-slide col-4 ">
+                    <img src="assets/images/welcome.png" alt="">
+                </div>
+                <div class="global-des-porteur col-lg-6 col-10">
+                    <div class="desc-porteur-projet ">
+                        <h1>Ce que propose les porteurs de projet</h1>
+                        <p>Trouver dans cette page tous les projet que proposent les jeunes porteurs de projet recherchant des
+                            bailleurs pour leurs
+                            financés</p>
+                    </div>
+                </div>
+                <div class="icon-left col-2">
+                    <img src="assets/images/icon-1.png" alt="">
+                </div>
+            </div>
+        </section>
+        <div class="line-see">
+
+        </div>
+        <div id="projet" style="margin: 30px 0;">
+            <div class="container">
+                <div class="projet-head row">
+                    <div class="restutue col-12 col-md-9">
+                        <div class="p-h p-h-left">
+                            <h4 class="blue-color">Lancez-vous dans le financement</h4>
+                            <div class="souligne">
+                                <span class="s-1"></span>
+                                <span class="s-2"></span>
+                            </div>
+                            <p class="p-h-left-para">Chaque contribution, qu'elle soit grande ou petite rapproche un peu plus
+                                les porteurs de projet de leurs objectifs.
+                                Ensemble, faites la différence et créer un impact significatif.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="p-h p-h-right w-100">
+                            <input type="text" placeholder="Rechercher" class="search-projet">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4 class="blue-color" style="text-align: center;">Tous les projets</h4>
+                    <div class="souligne souligne-projet">
+                        <span class="s-1"></span>
+                        <span class="s-2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="gen-list container">
+            <div class="projet-list row"  *ngFor="let projet of projets; let index = index">
+                <div class="col-12 col-md-6 col-lg-3" style="padding: 0;">
+                    <div class="icon-image">
+        
+                    </div>
+                </div>
+                <div class="middle-projet col-6 col-md-6 col-lg-6">
+                    <div class="titre-projet">
+                        <h4> {{projet.titre}}</h4>
+                    </div>
+                    <div class="desc-projet my-1">
+                        {{projet.description}}
+                    </div>
+                    <div class="another-infos d-flex gap-4">
+                        <div class="domaine"><i class="fa-solid fa-layer-group"></i>Domaine {{categories[index]}} </div>
+                        <div class="date"><i class="fa-solid fa-calendar-days"></i> Publié le 20/11/2023</div>
+                    </div>
+                </div>
+                <div class="content-btn col-12 col-md-12 col-lg-3">
+                    <button (click)="showDetail()"><i></i><i class="fa-solid fa-eye"></i> voir+ </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <app-footer></app-footer>
+</div>

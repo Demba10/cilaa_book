@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.diamond {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.diamond i {
+    font-size: 2rem;
+    padding-top: 4rem;
+
+}
+
+.mon-titre {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.two-bloc-txt {
+    display: grid;
+    grid-template-columns: 28% 28%;
+    gap: 10rem;
+    justify-content: center;
+  text-align: center;
+
+}
+
+.banner img{
+  width: 100%;
+  height: 75vh;
+}
+
+.two-bloc-txt p {
+    font-size: 1.02em;
+    font-weight: 700;
+}
+
+.bloc-txt1 {
+    /* background-color: aqua; */
+    height: 7rem;
+    margin-top: 3rem;
+}
+
+.bloc-txt2 {
+    /* background-color: rgb(21, 65, 65); */
+    height: 7rem;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 1120px) {
+    .two-bloc-txt {
+            display: grid;
+            grid-template-columns: 40% 40%;
+            gap: 6rem;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+    .my-image-between {
+            display: grid;
+            grid-template-columns: 85%;
+            justify-content: center;
+            margin-top: 6rem;
+        }
+
+        .my-image-between img {
+            width: 100%;
+        }
+
+        .first {
+
+        }
+}
+@media screen and (max-width: 794px) {
+    .two-bloc-txt {
+            display: grid;
+            grid-template-columns: 45% 45%;
+            gap: 2rem;
+            justify-content: center;
+
+
+        }
+}
+@media screen and (max-width: 767px) {
+    .two-bloc-txt {
+            display: flex;
+           flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+
+
+        }
+                .my-rates {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 3rem;
+                    text-align: center;
+                    margin-top: 4rem;
+                }
+}
+@media screen and (max-width: 521px) {
+    .two-bloc-txt {
+            display: flex;
+           flex-wrap: wrap;
+            gap: 4rem;
+            justify-content: center;
+
+
+        }
+}
+@media screen and (max-width: 414px) {
+    .two-bloc-txt {
+            display: flex;
+           flex-wrap: wrap;
+            gap: 6rem;
+            justify-content: center;
+
+
+        }
+}
+
+.loader {
+    --ballcolor: #E79B30;
+    --shadow: 0px 0 #ffffff00;
+    --shadowcolor: #ffffff00;
+    width: 7px;
+    height: 10px;
+    left: -120px;
+    border-radius: 50%;
+    position: relative;
+    color: var(--ballcolor);
+    animation: shadowRolling 2s linear infinite;
+    margin: 0 auto;
+    margin-top: -1.5rem;
+}
+
+@keyframes shadowRolling {
+
+    0% {
+        box-shadow: var(--shadow),
+            var(--shadow),
+            var(--shadow),
+            var(--shadow);
+    }
+
+    12% {
+        box-shadow: 100px 0 var(--ballcolor),
+            var(--shadow),
+            var(--shadow),
+            var(--shadow);
+    }
+
+    25% {
+        box-shadow: 110px 0 var(--ballcolor),
+            100px 0 var(--ballcolor),
+            var(--shadow),
+            var(--shadow);
+    }
+
+    36% {
+        box-shadow: 120px 0 var(--ballcolor),
+            110px 0 var(--ballcolor),
+            100px 0 var(--ballcolor),
+            var(--shadow);
+    }
+
+    50% {
+        box-shadow: 130px 0 var(--ballcolor),
+            120px 0 var(--ballcolor),
+            110px 0 var(--ballcolor),
+            100px 0 var(--ballcolor);
+    }
+
+    62% {
+        box-shadow: 200px 0 var(--shadowcolor),
+            130px 0 var(--ballcolor),
+            120px 0 var(--ballcolor),
+            110px 0 var(--ballcolor);
+    }
+
+    75% {
+        box-shadow: 200px 0 var(--shadowcolor),
+            200px 0 var(--shadowcolor),
+            130px 0 var(--ballcolor),
+            120px 0 var(--ballcolor);
+    }
+
+    87% {
+        box-shadow: 200px 0 var(--shadowcolor),
+            200px 0 var(--shadowcolor),
+            200px 0 var(--shadowcolor),
+            130px 0 var(--ballcolor);
+    }
+
+    100% {
+        box-shadow: 200px 0 var(--shadowcolor),
+            200px 0 var(--shadowcolor),
+            200px 0 var(--shadowcolor),
+            200px 0 var(--shadowcolor);
+    }
+}
+
+.my-rates {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.my-rates p {
+
+    font-size: 1.08em;
+    font-weight: 700;
+}
+
+.my-rates .jaune {
+    color: #f89710;
+    font-size: 3em;
+}
+
+.my-rates .txt-between {
+    margin-top: -2rem;
+}
+
+.second {
+    /* border: 1px solid #000;
+    padding: 0 2rem;
+    border-bottom: none;
+    border-top: none; */
+
+}
+
+.my-image-between {
+    display: grid;
+    grid-template-columns: 50%;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.my-image-between img {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+
+.mon-slider {
+    /* margin: auto; */
+    margin-top: 3rem;
+    overflow: hidden;
+    position: relative;
+    padding: 2%;
+}
+
+.mon-slider .slider-img {
+    -webkit-animation: scroll 30s linear infinite;
+    animation: scroll 30s linear infinite;
+    display: flex;
+    width: calc(150px * 14);
+}
+
+.mon-slider .slide {
+    width: 150px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.mon-slider .slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-150px * 7));
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-150px * 7));
+    }
+}
+
+.my-image{
+  background-color: #fcfcfc;
+  margin-top: 2.5rem;
+}
+
+/* .bloc-txt1, .bloc-txt2{
+  background-color: #f8f8f8;
+  height: auto;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+} */
+
+.presss
+{
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  margin-top: 1.5rem;
+}
+
+.presss i{
+  font-size: 2rem;
+  color: #fb8500;
+}
+
+
+.done
+{
+  display: grid;
+  grid-template-columns: 30% 40%;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 6rem;
+}
+
+.cisse{
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #fb8500;
+  padding-top: 1.5rem;
+}
+
+.noir{
+  color: black;
+}
+
+
+
+
+
+
+
